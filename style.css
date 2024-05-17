@@ -168,6 +168,7 @@ nav{
 .container ul li{
     list-style: none;
     background: #5a5a5a;
+    flex-wrap: wrap;
     border-radius: 4px;
     color:#fff;
     padding:6px 12px;
@@ -202,7 +203,7 @@ nav{
 
 .banner{
     width:100%;
-    height:350px;
+    /* height:350px; */
     border-radius: 8px;
 }
 
@@ -315,22 +316,50 @@ nav{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     margin-top: 10px;
     color:#5a5a5a;
     font-size: 14px;
-    margin-left: 8px;
+    /* margin-left: 2px; */
 }
 
-.play-video .play-video-info img{
+.play-video .play-video-info a img{
     width:20px;
     margin-right: 8px;
+    display:inline-flex;
+    align-items: center;  
 }
 
-.play-video .play-video-info a{
+.play-video .play-video-info p{
     display:inline-flex;
+    flex-basis: 60%;
+}
+
+.video-des{
+    display:flex;
+    justify-content: space-between;
     align-items: center;
-    
+    margin-top: 10px;
+    flex-wrap:wrap;
+}
+
+.video-des p{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.video-des button{
+     border-style:none;
+     padding:10px 12px;
+     background-color: #ff0000;
+     color:#fff;
+     border-radius:5px;
+     cursor:pointer;
+     text-transform: uppercase;
+}
+
+.video-des button:hover{
+    background-color: #ff0000;
+     color:#fff;
 }
 
 /* play vido page styling end */
@@ -446,6 +475,7 @@ nav{
         display:none;
     }
 
+
     /* .container, .large-container{
         padding-left: 5%;
         padding-right: 5%;
@@ -492,5 +522,44 @@ nav{
     }
   } */
 
+  @media (max-width:667px)
+  {
+    .row{
+        flex-wrap: wrap;
+    }
+
+    .right-sidebar{
+        flex-basis:100%;
+        padding-top: 10px;
+    }
+
+    .right-sidebar img{
+        width:100%;
+    }
+
+    .play-video{
+        flex-basis: 100%;
+    }
+
+    .side-video-list{
+        display:block;
+    }
+  }
+
+  @media (max-width:1024px){
+    .row{
+        display: block;
+    }
+  }
+
+  @media (max-width:1294px){
+    .row{
+        display: block;
+    }
+
+    .side-video-list{
+        padding-top: 10px;
+    }
+  }
   
 
